@@ -1,0 +1,21 @@
+#next-nav {
+  position: fixed;
+  bottom: 0;
+  right: 4.75em;
+  width: 3.75em;
+  height: 3.75em;
+  background: #EFF7F9;
+  cursor: pointer; }
+  #next-nav:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.9375em solid #2FBBDC;
+    border-right: 0.9375em solid transparent;
+    border-left: 0.9375em solid transparent;
+    position: absolute;
+    top: 1.5625em;
+    left: 0.9375em; }
+  #next-nav.to-top:before {
+    border-top: 0;
+    border-bottom: 0.9375em solid #2FBBDC; }
