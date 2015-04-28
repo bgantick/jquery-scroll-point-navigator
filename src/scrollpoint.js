@@ -198,7 +198,6 @@ $.elevator = {
 
 				e.preventDefault();
 				$('body,html').animate({scrollTop: 0});
-				$(this).removeClass('to-top');
 
 			//otherwise..
 			} else {
