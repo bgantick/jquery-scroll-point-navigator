@@ -199,6 +199,9 @@ $.elevator = {
 				e.preventDefault();
 				$('body,html').animate({scrollTop: 0});
 
+				//reset next_anchor
+				next_anchor = $(anchors[0]);
+
 			//otherwise..
 			} else {
 
