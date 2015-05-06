@@ -141,7 +141,11 @@ $.elevator = {
   init : function(){
 
 		//Add the scroll 'button' to the DOM
-    $('body').append('<div id="next-nav">');
+		$('body').append('<div id="next-nav">');
+
+		$.elevator.checkPoints();
+		$.elevator.checkScroll();
+		$.elevator.nextClick();
 
   },
 
@@ -241,9 +245,6 @@ $.elevator = {
 
     if ( $('.scroll-point').length ){
   		$.elevator.init();
-  		$.elevator.checkPoints();
-  		$.elevator.checkScroll();
-  		$.elevator.nextClick();
   	}
 
   });
