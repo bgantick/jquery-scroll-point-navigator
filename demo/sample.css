@@ -38,7 +38,7 @@ section {
     border-top: 0;
     border-bottom: 0.9375em solid #2FBBDC; }
 
-footer {
+#main-footer {
   height: 20em;
   border-top: 1em solid #EFF7F9;
   background: #2FBBDC;

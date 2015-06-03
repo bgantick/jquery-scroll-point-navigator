@@ -171,10 +171,14 @@ $.elevator = {
 		//This checks the scroll position and changes the toggle state of the button
 		$(document).on('scroll', function(){
 
+			//These vars are for measuring the height of any kind of fixed element
+			//(#header-panel in this case) at the top of the page and adding it to the scroll offset
 			var lastPoint = $('.last-point').offset().top;
 			var docTop = $(document).scrollTop() + $('#header-panel').outerHeight();
+			var scrollBottom = $(window).scrollTop() + $(window).height();
+			var fooTop = $('#main-footer').offset().top;
 
-			if ( docTop >= lastPoint ) {
+			if ( docTop >= lastPoint || scrollBottom >= fooTop ) {
 
 				$('#next-nav').addClass('to-top');
 
@@ -190,7 +194,7 @@ $.elevator = {
 
   nextClick : function(){
 
-		//Button action - this is where the magic happens
+		//Button action - this is where the button things happen
 
 		var anchors = $('.scroll-point');
 		var next_anchor = $(anchors[0]);
