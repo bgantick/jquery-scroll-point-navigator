@@ -171,13 +171,14 @@ $.elevator = {
 		//This checks the scroll position and changes the toggle state of the button
 		$(document).on('scroll', function(){
 
-			//These vars are for measuring the height of any kind of fixed element
-			//(#header-panel in this case) at the top of the page and adding it to the scroll offset
 			var lastPoint = $('.last-point').offset().top;
+			//This var is for measuring the height of any kind of fixed element
+			//(#header-panel in this case) at the top of the page and adding it to the scroll offset
 			var docTop = $(document).scrollTop() + $('#header-panel').outerHeight();
 			var scrollBottom = $(window).scrollTop() + $(window).height();
 			var fooTop = $('#main-footer').offset().top;
 
+			//If we're at the last point (or footer is at bottom) - make next-nav click go to top
 			if ( docTop >= lastPoint || scrollBottom >= fooTop ) {
 
 				$('#next-nav').addClass('to-top');
