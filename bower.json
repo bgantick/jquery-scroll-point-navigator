@@ -1,0 +1,29 @@
+{
+  "name": "jquery-scroll-point-navigator",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bgantick/jquery-scroll-point-navigator"
+  },
+  "authors": [
+    "Brian Gantick <bgantick@gmail.com> (http://www.briangantick.com)"
+  ],
+  "description": "A small(ish) jQuery plugin that detects defined scroll points on a page and navigates between them.",
+  "main": "src/min/scrollpoint-min.js",
+  "keywords": [
+    "navigation",
+    "jquery",
+    "scroll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.2"
+  }
+}
