@@ -1,6 +1,12 @@
 (function($){
 
-$.fn.elevator = function(){
+$.fn.elevator = function(useroptions){
+
+	// Define options and extend with user
+	var options = {
+			scrollpointClass: 'scroll-point'
+	};
+	$.extend(options, useroptions);
 
 	//Add the scroll 'button' to the DOM
 	$('body').append('<div id="next-nav">');
@@ -8,10 +14,10 @@ $.fn.elevator = function(){
 	this.checkPoints = function(){
 
 		//Find the total # of scroll points
-		var total = $('.scroll-point').length;
+		var total = $('.'+options.scrollpointClass).length;
 
 		//go through each scroll point and add a class to the last one
-		$('.scroll-point').each(function(i){
+		$('.'+options.scrollpointClass).each(function(i){
 
 			if ( i === total - 1 ) {
 				$(this).addClass('last-point');
@@ -53,7 +59,7 @@ $.fn.elevator = function(){
 
 		//Button action - this is where the button things happen
 
-		var anchors = $('.scroll-point');
+		var anchors = $('.'+options.scrollpointClass);
 		var next_anchor = $(anchors[0]);
 
 		$('#next-nav').on('click', function(e){
@@ -73,7 +79,7 @@ $.fn.elevator = function(){
 				e.preventDefault();
 				var headHeight = $('#header-panel').outerHeight();
 
-					$('.scroll-point').each(function(i){
+					$('.'+options.scrollpointClass).each(function(i){
 
 						//add a 'current' class the the scrollpoint that's in the viewport when the next button is clicked
 						$(this).viewportChecker({
@@ -108,14 +114,5 @@ $.fn.elevator = function(){
 	return this;
 
 };
-
-  $(document).ready(function(){
-
-    if ( $('.scroll-point').length ){
-  		$(this).elevator();
-  	}
-
-  });
-
 
 })(jQuery);
