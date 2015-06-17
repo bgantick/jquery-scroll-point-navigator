@@ -38,6 +38,28 @@ section {
     border-top: 0;
     border-bottom: 0.9375em solid #2FBBDC; }
 
+#custom-next {
+  position: fixed;
+  bottom: 0;
+  left: 4.75em;
+  width: 3.75em;
+  height: 3.75em;
+  background: #EFF7F9;
+  cursor: pointer; }
+  #custom-next:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.9375em solid red;
+    border-right: 0.9375em solid transparent;
+    border-left: 0.9375em solid transparent;
+    position: absolute;
+    top: 1.5625em;
+    left: 0.9375em; }
+  #custom-next.to-top:before {
+    border-top: 0;
+    border-bottom: 0.9375em solid red; }
+
 #main-footer {
   height: 20em;
   border-top: 1em solid #EFF7F9;

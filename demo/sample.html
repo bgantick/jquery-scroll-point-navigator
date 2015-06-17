@@ -85,11 +85,14 @@
 
     </article>
 
+    <div id="custom-next"></div>
+
     <!-- DON'T EVER DO THIS. ONLY FOR DEMONSTRATION PURPOSES -->
     <script>
       $(document).ready(function(){
         $(this).elevator({
-          scrollpointClass: 'custom-class'
+          scrollpointClass: 'custom-class',
+          $triggerObj: $('#custom-next')
         });
       });
     </script>

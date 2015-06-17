@@ -4,12 +4,15 @@ $.fn.elevator = function(useroptions){
 
 	// Define options and extend with user
 	var options = {
-			scrollpointClass: 'scroll-point'
+			scrollpointClass: 'scroll-point',
+			$triggerObj: ''
 	};
 	$.extend(options, useroptions);
 
-	//Add the scroll 'button' to the DOM
-	$('body').append('<div id="next-nav">');
+	//Add the scroll 'button' to the DOM if custom trigger isn't defined
+	if( options.$triggerObj === '' ){
+		$('body').append('<div id="next-nav">');
+	}
 
 	this.checkPoints = function(){
 
@@ -43,11 +46,11 @@ $.fn.elevator = function(useroptions){
 			//If we're at the last point (or footer is at bottom) - make next-nav click go to top
 			if ( docTop >= lastPoint || scrollBottom >= fooTop ) {
 
-				$('#next-nav').addClass('to-top');
+				options.$triggerObj.addClass('to-top');
 
 			} else {
 
-				$('#next-nav').removeClass('to-top');
+				options.$triggerObj.removeClass('to-top');
 
 			}
 
@@ -62,7 +65,7 @@ $.fn.elevator = function(useroptions){
 		var anchors = $('.'+options.scrollpointClass);
 		var next_anchor = $(anchors[0]);
 
-		$('#next-nav').on('click', function(e){
+		options.$triggerObj.on('click', function(e){
 
 			//if we're on or past the last point, scroll to the top
 			if ( $(this).hasClass('to-top') ) {
