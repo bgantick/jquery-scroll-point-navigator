@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": ">=1.10.2"
+    "jquery": ">=1.10.2",
+    "jquery-viewport-checker": "~1.8.0"
   }
 }
