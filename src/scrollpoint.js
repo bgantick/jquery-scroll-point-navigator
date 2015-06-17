@@ -12,6 +12,7 @@ $.fn.elevator = function(useroptions){
 	//Add the scroll 'button' to the DOM if custom trigger isn't defined
 	if( options.$triggerObj === '' ){
 		$('body').append('<div id="next-nav">');
+		options.$triggerObj = $('#next-nav');
 	}
 
 	this.checkPoints = function(){
