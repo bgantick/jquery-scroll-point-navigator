@@ -15,7 +15,7 @@
         <h1>Scroll Point Navigator</h1>
       </header>
 
-      <section class="scroll-point">
+      <section class="custom-class">
         <h2>Here's the first section that we want to scroll to</h2>
         <p>
           Excuse me. That's for messing up my hair. Say, why do you let those boys push you around like that? Lorenzo, where're you keys? Like I always told you, if you put your mind to it you could accomplish anything.
@@ -31,7 +31,7 @@
         </p>
       </section>
 
-      <section class="scroll-point">
+      <section class="custom-class">
         <h2>Here's another section</h2>
         <p>
           Excuse me. That's for messing up my hair. Say, why do you let those boys push you around like that? Lorenzo, where're you keys? Like I always told you, if you put your mind to it you could accomplish anything.
@@ -47,7 +47,7 @@
         </p>
       </section>
 
-      <section class="scroll-point">
+      <section class="custom-class">
         <h2>Here's another section</h2>
         <p>
           Excuse me. That's for messing up my hair. Say, why do you let those boys push you around like that? Lorenzo, where're you keys? Like I always told you, if you put your mind to it you could accomplish anything.
@@ -63,7 +63,7 @@
         </p>
       </section>
 
-      <section class="scroll-point">
+      <section class="custom-class">
         <h2>Here's the last section section</h2>
         <p>
           Excuse me. That's for messing up my hair. Say, why do you let those boys push you around like that? Lorenzo, where're you keys? Like I always told you, if you put your mind to it you could accomplish anything.
@@ -84,6 +84,15 @@
       </footer>
 
     </article>
+
+    <!-- DON'T EVER DO THIS. ONLY FOR DEMONSTRATION PURPOSES -->
+    <script>
+      $(document).ready(function(){
+        $(this).elevator({
+          scrollpointClass: 'custom-class'
+        });
+      });
+    </script>
 
   </body>
 </html>
