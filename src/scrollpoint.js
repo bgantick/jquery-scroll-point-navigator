@@ -1,6 +1,6 @@
 (function($){
 
-$.fn.elevator = function(useroptions){
+$.fn.scrollpointNav = function(useroptions){
 
 	// Define options and extend with user
 	var options = {
@@ -114,7 +114,6 @@ $.fn.elevator = function(useroptions){
 	this.checkScroll();
 	this.nextClick();
 
-	// Default jquery plugin behaviour
 	return this;
 
 };
