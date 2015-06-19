@@ -28,6 +28,6 @@ Just call the function on document.ready and change some options if you want. Li
             //of the last scroll point and the bottom of the page is too short for the last scroll point
             //to actually reach the top of the page. Thats a lot of words.
             //(must be an object - default is $('#main-footer'))
-      			$scrollEnd: $('#main-footer')
+            $scrollEnd: $('#main-footer')
           });
         });
