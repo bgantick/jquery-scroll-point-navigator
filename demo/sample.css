@@ -83,7 +83,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2em;
+  padding: 2em 0;
   border-bottom: 1em solid #758399;
   background: #3A4E6E;
   margin-bottom: 2em;
@@ -91,12 +91,13 @@ header {
 }
 
 article {
-  padding-top: 10em;
+  padding-top: 9em;
 }
 
 section {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   padding: 0 4.75em;
+  padding-top: 2em;
 }
 
 #next-nav {
@@ -145,6 +146,22 @@ section {
 
 #footer {
   height: 20em;
+  margin-top: 4em;
   border-top: 1em solid #758399;
   background: #3A4E6E;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  section {
+    padding: 0 2.5em;
+  }
+  #custom-next {
+    right: 2.5em;
+  }
 }
