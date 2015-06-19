@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <title>Scroll Point Navigator | </title>
+
     <link rel="stylesheet" href="sample.css" media="all" title="main styles" type="text/css" charset="utf-8">
 
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -11,12 +12,12 @@
   </head>
   <body>
     <article>
-      <header id="header-panel">
+      <header id="main-header">
         <h1>Scroll Point Navigator</h1>
       </header>
 
       <section class="custom-class">
-        <h2>Here's the first section that we want to scroll to</h2>
+        <h2>Here's the first section</h2>
         <p>
           Excuse me. That's for messing up my hair. Say, why do you let those boys push you around like that? Lorenzo, where're you keys? Like I always told you, if you put your mind to it you could accomplish anything.
         </p>
@@ -79,7 +80,7 @@
         </p>
       </section>
 
-      <footer id="main-footer">
+      <footer id="footer">
 
       </footer>
 
@@ -92,7 +93,9 @@
       $(document).ready(function(){
         $(this).scrollpointNav({
           scrollpointClass: 'custom-class',
-          $triggerObj: $('#custom-next')
+          $triggerObj: $('#custom-next'),
+          $scollOffset: $('#main-header'),
+          $scrollEnd: $('#footer')
         });
       });
     </script>
