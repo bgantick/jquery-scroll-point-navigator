@@ -16,6 +16,8 @@ Just call the function on document.ready and change some options if you want. Li
         $(document).ready(function(){
           $(this).scrollpointNav({
             scrollpointClass: 'custom-class',
-            $triggerObj: $('#custom-next')
+            $triggerObj: $('#custom-next'),
+            $scollOffset: $('#header-panel'),
+      			$scrollEnd: $('#main-footer')
           });
         });
