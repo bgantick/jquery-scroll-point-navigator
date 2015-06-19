@@ -5,7 +5,9 @@ $.fn.scrollpointNav = function(useroptions){
 	// Define options and extend with user
 	var options = {
 			scrollpointClass: 'scroll-point',
-			$triggerObj: ''
+			$triggerObj: '',
+			$scollOffset: $('#header-panel'),
+			$scrollEnd: $('#main-footer')
 	};
 	$.extend(options, useroptions);
 
@@ -40,9 +42,9 @@ $.fn.scrollpointNav = function(useroptions){
 			var lastPoint = $('.last-point').offset().top;
 			//This var is for measuring the height of any kind of fixed element
 			//(#header-panel in this case) at the top of the page and adding it to the scroll offset
-			var docTop = $(document).scrollTop() + $('#header-panel').outerHeight();
+			var docTop = $(document).scrollTop() + options.$scollOffset.outerHeight();
 			var scrollBottom = $(window).scrollTop() + $(window).height();
-			var fooTop = $('#main-footer').offset().top;
+			var fooTop = options.$scrollEnd.offset().top;
 
 			//If we're at the last point (or footer is at bottom) - make next-nav click go to top
 			if ( docTop >= lastPoint || scrollBottom >= fooTop ) {
@@ -81,7 +83,7 @@ $.fn.scrollpointNav = function(useroptions){
 			} else {
 
 				e.preventDefault();
-				var headHeight = $('#header-panel').outerHeight();
+				var headHeight = options.$scollOffset.outerHeight();
 
 					$('.'+options.scrollpointClass).each(function(i){
 
